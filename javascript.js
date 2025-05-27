@@ -1,6 +1,6 @@
 console.log('hello world');
 
-function getComputerChoice () {
+function getComputerChoice() {
     let rpsComputer = Math.floor(Math.random() * 3 );
     
     if (rpsComputer === 2) {
@@ -38,10 +38,6 @@ let computerScore = 0;
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 
-function clearSelection () {
-    humanSelection = 0;
-    computerSelection = 0;
-} 
 
 function playRound(humanChoice, computerChoice) {
 
@@ -49,42 +45,52 @@ function playRound(humanChoice, computerChoice) {
 if (humanSelection === "paper" && computerSelection === "rock")
 {humanScore++;
 console.log("You win! Paper beats rock. You saved humanity for now...");
-clearSelection();}
+getHumanChoice();
+getComputerChoice();}
 
 else if (humanSelection === "paper" && computerSelection === "scissors")
 {computerScore++;
 console.log("You lose! Scissors beats paper. Humanity is in danger!");
-clearSelection();}
+getHumanChoice();
+getComputerChoice();}
 
 else if (humanSelection === "paper" && computerSelection === "paper")
 {console.log("Is a tie, humanity and computer can be similar, right?");
-    clearSelection();
+   getHumanChoice();
+getComputerChoice();
 }
 
 else if (humanSelection === "rock" && computerSelection === "rock") 
 {console.log("Is a tie, humanity and computer can be similar, right?");
-    clearSelection();
+   getHumanChoice();
+getComputerChoice();
 }
 
 else if (humanSelection === "rock" && computerSelection === "scissors")
 {humanScore++;
 console.log("You win! Rock beats scissors. You saved humanity for now...");
-clearSelection();}
+getHumanChoice();
+getComputerChoice();}
 
 else if (humanSelection === "rock" && computerSelection === "paper")
 {computerScore++;
 console.log("You lose! Paper beats rock. Humanity is in danger!");
-clearSelection();}
+getHumanChoice();
+getComputerChoice();
+}
 
 else if (humanSelection === "scissors" && computerSelection === "paper")
 {humanScore++;
 console.log("You win! Scissors beats paper. You saved humanity for now...");
-clearSelection();}
+getHumanChoice();
+getComputerChoice();
+}
 
 else if (humanSelection === "scissors" && computerSelection === "rock")
 {computerScore++;
 console.log("You lose! Rock beats scissors. Humanity is in danger!");
-clearSelection();}
+getHumanChoice();
+getComputerChoice();}
 
 else { console.log("Maybe this is not the game for you");}
 
