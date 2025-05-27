@@ -75,7 +75,22 @@ else { console.log("Maybe this is not the game for you");}
 
 }
 
-console.log(playRound(humanSelection, computerSelection));
+
  
 
+function playGame() {
+    let roundScore
+   
+    for (let roundScore = 0; roundScore < 5 ; roundScore++)
+    {playRound(humanSelection, computerSelection)
+           
 
+    }
+
+    if (roundScore = 5) {
+        if (humanScore > computerScore) {console.log("Humanity has won!");} 
+        else if (humanScore < computerScore) {console.log("Robots now rule the universe");}
+    }
+}
+
+console.log(playGame());
