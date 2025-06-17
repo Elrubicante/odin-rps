@@ -1,6 +1,3 @@
-let computerResult
-let humanResult
-
 function getComputerChoice() {
     let rpsComputer = Math.floor(Math.random() * 3 );
     
@@ -19,14 +16,14 @@ function getComputerChoice() {
 
 
 function getHumanChoice() {
-let h = prompt ('Select your option?', '');
-if (h.toLowerCase() === "scissors") {
+let humanInput = prompt ('Select your option?', '');
+if (humanInput.toLowerCase() === "scissors") {
     return ("scissors");
 }
-else if (h.toLowerCase() === "paper") {
+else if (humanInput.toLowerCase() === "paper") {
     return ("paper");
 }
-else if (h.toLowerCase() === "rock") {
+else if (humanInput.toLowerCase() === "rock") {
     return ("rock");
 }
 
@@ -68,7 +65,7 @@ function playGame() {
                 while Computers are at ${computerScore}`); 
 }
 } 
-        let roundScore;
+     
    
         for (roundScore = 0; roundScore < 5 ; roundScore++)
         {  humanSelection = getHumanChoice();
