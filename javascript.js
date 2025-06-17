@@ -41,19 +41,19 @@ function playGame() {
     function playRound(humanChoice,computerChoice) {
 
 //Human wins.
-        if (humanSelection === "paper" && computerSelection === "rock"  
-            humanSelection === "rock" && computerSelection === "scissors" 
+        if (humanSelection === "paper" && computerSelection === "rock"  ||
+            humanSelection === "rock" && computerSelection === "scissors" ||
             humanSelection === "scissors" && computerSelection === "paper"
         ) 
         { humanScore++;
-        console.log(You win! ${humanSelection} beats ${computerSelection}. You saved humanity for now...);
+        console.log(`You win! ${humanSelection} beats ${computerSelection}. You saved humanity for now...`);
         alert(`This is how destiny is going: Humans are at ${humanScore} point,
     while Computers are at ${computerScore}`);
 }
 
 //Computer wins.
-        else if (humanSelection === "paper" && computerSelection === "scissors"  
-                 humanSelection === "rock" && computerSelection === "paper" 
+        else if (humanSelection === "paper" && computerSelection === "scissors"  ||
+                 humanSelection === "rock" && computerSelection === "paper"  ||
                  humanSelection === "scissors" && computerSelection === "rock"
         )
                 {computerScore++;
